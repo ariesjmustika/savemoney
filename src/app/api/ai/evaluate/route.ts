@@ -114,19 +114,9 @@ export async function POST(req: Request) {
   } catch (error: any) {
     console.error("AI Evaluation Error:", error);
     
-    // Diagnostic: Try to list available models to see what's wrong
-    let availableModels: string[] = [];
-    try {
-      const result = await genAI.listModels();
-      availableModels = result.models.map(m => m.name);
-    } catch (listError) {
-      availableModels = ["Could not fetch model list"];
-    }
-
     return NextResponse.json({ 
       error: "Failed to generate AI evaluation",
-      details: error.message,
-      available_models_for_your_key: availableModels
+      details: error.message
     }, { status: 500 });
   }
 }
