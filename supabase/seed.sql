@@ -1,0 +1,26 @@
+-- SEED CATEGORIES
+
+INSERT INTO categories (name, icon, type) VALUES
+('Salary', '💰', 'income'),
+('Bonus', '🎁', 'income'),
+('Investment', '📈', 'income'),
+('Others (Income)', '🧧', 'income'),
+('Wifi', '🌐', 'expense'),
+('Mobile Data', '📱', 'expense'),
+('Netflix', '📺', 'expense'),
+('Youtube Premium', '🎬', 'expense'),
+('Groceries', '🛒', 'expense'),
+('Dining Out', '🍔', 'expense'),
+('Baby - Pampers', '👶', 'expense'),
+('Baby - Milk', '🍼', 'expense'),
+('Baby - Gear', '🧸', 'expense'),
+('Education', '🎓', 'expense'),
+('Electricity', '⚡', 'expense'),
+('Water', '💧', 'expense'),
+('Rent', '🏠', 'expense'),
+('Transport', '🚗', 'expense'),
+('Health', '🏥', 'expense'),
+('Shopping', '🛍️', 'expense'),
+('Wife Needs', '👩', 'expense'),
+('Own Needs', '👨', 'expense'),
+('Others (Expense)', '💸', 'expense');
