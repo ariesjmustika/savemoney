@@ -138,12 +138,12 @@ export default function DashboardClient({ initialProfile }: { initialProfile: an
                   background: 'var(--muted)', display: 'flex', 
                   alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem' 
                 }}>
-                  {t.categories?.icon || '💸'}
+                  {(t.categories as any)?.icon || '💸'}
                 </div>
                 <div>
-                  <p style={{ fontWeight: '600' }}>{t.description || t.categories?.name}</p>
+                  <p style={{ fontWeight: '600' }}>{t.description || (t.categories as any)?.name}</p>
                   <p style={{ fontSize: '0.8rem', color: 'var(--muted-foreground)' }}>
-                    {new Date(t.transaction_date).toLocaleDateString()} • {t.wallets?.name} • by {t.profiles?.full_name}
+                    {new Date(t.transaction_date).toLocaleDateString()} • {(t.wallets as any)?.name} • by {(t.profiles as any)?.full_name}
                   </p>
                 </div>
               </div>

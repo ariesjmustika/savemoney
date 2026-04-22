@@ -38,7 +38,7 @@ export async function POST(req: Request) {
   // 2. Prepare data for AI
   const summary = transactions.map(t => ({
     amount: t.amount,
-    category: t.categories?.name || 'Uncategorized',
+    category: (t.categories as any)?.name || 'Uncategorized',
     type: t.type,
     description: t.description
   }));
